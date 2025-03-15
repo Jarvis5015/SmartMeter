@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Electricity Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2></h2>
+      <input type="text" class="discom-search" placeholder="🔍 Search DISCOM..." id="discomSearch" />
+      <h2>List of DISCOMs</h2>
+      <ul class="discom-list" id="discomList">
+        <li data-discom="discom1"></li>
+        <li data-discom="discom2"></li>
+        <li data-discom="discom3"></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Info Row -->
+      <div class="top-info">
+        <div class="info-card">
+          <h3>DISCOM</h3>
+          <p id="selectedDiscom">--</p>
+        </div>
+        <div class="info-card">
+          <h3>Power Distributed</h3>
+          <p>-- kWh</p>
+        </div>
+        <!-- <div class="info-card">
+          <h3>Power Bought</h3>
+          <p>-- kWh</p>
+        </div> -->
+      </div>
+
+      <!-- Meter Section -->
+      <div class="meter-section">
+        <div class="meter-list-container">
+          <h3></h3>
+          <input type="text" class="meter-search" placeholder="🔍 Search Meter..." id="meterSearch" />
+          <h3>List of Meters</h3>
+          <ul class="meter-list" id="meterList">
+            <!-- Dynamic list items will appear here -->
+          </ul>
+        </div>
+
+        <!-- Meter Info -->
+        <div class="meter-info">
+          <div class="meter-card">
+            <h4><span class="emoji">🔢</span>Meter ID</h4>
+            <p id="meterID">--</p>
+          </div>
+          <div class="meter-card">
+            <h4><span class="emoji">⚡</span>Power Consumption</h4>
+            <p id="powerConsumption">-- kWh</p>
+          </div>
+          <div class="meter-card">
+            <h4><span class="emoji">🕒</span>Timestamp</h4>
+            <p id="timestamp">--</p>
+          </div>
+          <div class="meter-card">
+            <h4><span class="emoji">💰</span>Bill Amount</h4>
+            <p id="billAmount">--</p>
+          </div>
+          <div class="meter-card">
+            <h4><span class="emoji">💰</span>voltage</h4>
+            <p id="voltage">--</p>
+          </div>
+          <div class="meter-card">
+            <h4><span class="emoji">💰</span>current</h4>
+            <p id="current">--</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
