@@ -1,5 +1,5 @@
 # Smart Meter System
-
+Note: Main branch only has website. for node and gateway code please change the banch
 This repository contains the code for a Smart Meter System that leverages LoRa communication and Firebase Realtime Database integration. The project is organized into multiple branches, each tailored for a specific device role.
 
 ## Project Overview
